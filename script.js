@@ -3,9 +3,9 @@ const slidesList = [
   'slides/slide3.html',
   'slides/slide2.html',
   'slides/slide1c.html',        // Intro - Capital Costs
-  'slides/slide4.html',
   'slides/slide1b.html',        // Intro - Project Overivew
   'slides/slide1d.html',        // Intro - Literature Gap / Closing the Loop
+  'slides/slide4.html',         // Intro - Why AI / ML Fits
   'slides/slide1e.html',        // Intro - Roadmap
   'slides/slide5.html',         // Sec II Platform (Fig 1)
   'slides/slide5b.html',        // Sec II AI Outputs to Fab Actions
@@ -42,7 +42,7 @@ async function initPresentation() {
   counter = document.getElementById('counter');
   attachInteractionHandlers();
 
-  await appendSlide(slidesList[0], app);
+  await appendSlide(slidesList[0], app, 0);
   showSlide(0);
 
   // Load the remaining slides in the background so the first slide is visible immediately.
@@ -50,7 +50,7 @@ async function initPresentation() {
   loadRemainingSlides(app, startIndex);
 }
 
-async function appendSlide(slidePath, container) {
+async function appendSlide(slidePath, container, index) {
   try {
     const response = await fetch(slidePath);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -58,9 +58,14 @@ async function appendSlide(slidePath, container) {
 
     const section = document.createElement('section');
     section.className = 'slide';
+    const variantClass = getSlideVariant(typeof index === 'number' ? index : slides.length);
+    if (variantClass) section.classList.add(variantClass);
     section.innerHTML = html;
     container.appendChild(section);
     slides.push(section);
+    if (slides.length > 1) {
+      showSlide(current);
+    }
     return section;
   } catch (error) {
     console.error(`Error loading ${slidePath}:`, error);
@@ -70,8 +75,14 @@ async function appendSlide(slidePath, container) {
 
 async function loadRemainingSlides(container, startIndex = 1) {
   for (let i = startIndex; i < slidesList.length; i += 1) {
-    await appendSlide(slidesList[i], container);
+    await appendSlide(slidesList[i], container, i);
   }
+}
+
+function getSlideVariant(index) {
+  if (index === 0) return 'title-slide';
+  if (index === slidesList.length - 1) return 'thankyou-slide';
+  return 'content-slide';
 }
 
 function attachInteractionHandlers() {

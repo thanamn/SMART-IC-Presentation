@@ -5,10 +5,15 @@
     <h3>Whole-Trace Reconstruction</h3>
     <p>Offline detection treats the full 176-second wafer trace as one event and checks whether it matches the learned normal behavior.</p>
     <div class="process-flow" style="margin-top: 24px;">
-      <div class="step">
+      <div class="step" style="overflow: visible;">
         <div class="step-num">1</div>
         <h3>Collect</h3>
         <p>Acquire the full trace for one wafer.</p>
+        <style>
+          .slide .process-flow .step::after {
+            display: none;
+          }
+        </style>
       </div>
       <div class="step">
         <div class="step-num">2</div>

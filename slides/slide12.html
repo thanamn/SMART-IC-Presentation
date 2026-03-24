@@ -1,28 +1,28 @@
 <div class="content full-height">
   <div class="kicker">Section III-B: Anomaly Detection</div>
-  <h2>Figure 3: ROC Comparison</h2>
+  <h2>ROC Comparison of Detection Models</h2>
   <p class="subtitle" style="margin-top: 20px;">ROC curves show how well each model separates normal and faulty wafers across all thresholds.</p>
 
-  <div class="grid-2 wide-right" style="margin-top: 28px; align-items: stretch;">
+  <div class="grid-2" style="margin-top: 30px; gap: 30px; align-items: stretch;">
     <div class="panel soft">
       <h3 style="color: var(--accent-2);">Best AUC Scores</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px;">
-        <div class="mini-cell" style="min-height: 104px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+        <div class="mini-cell" style="min-height: 88px; padding: 14px 14px 12px;">
           <strong style="color: var(--accent-2);">0.90</strong>
           <div class="label">AE</div>
           <div class="desc">Top preliminary result.</div>
         </div>
-        <div class="mini-cell" style="min-height: 104px;">
+        <div class="mini-cell" style="min-height: 88px; padding: 14px 14px 12px;">
           <strong style="color: #60a5fa;">0.90</strong>
           <div class="label">VAE</div>
           <div class="desc">Matches AE performance.</div>
         </div>
-        <div class="mini-cell" style="min-height: 104px;">
+        <div class="mini-cell" style="min-height: 88px; padding: 14px 14px 12px;">
           <strong style="color: #fbbf24;">0.76</strong>
           <div class="label">Omnianomaly</div>
           <div class="desc">Useful, but clearly lower.</div>
         </div>
-        <div class="mini-cell" style="min-height: 104px;">
+        <div class="mini-cell" style="min-height: 88px; padding: 14px 14px 12px;">
           <strong style="color: #fb7185;">0.55</strong>
           <div class="label">VQ-VAE</div>
           <div class="desc">Weakest result here.</div>
@@ -34,8 +34,8 @@
       </div>
     </div>
 
-    <div class="figure-card">
-      <img src="figures/figure3.png" alt="ROC Curves">
+    <div class="figure-card visual" style="min-height: 0; margin: 0 auto; align-self: center;">
+      <img src="figures/figure3.png" alt="ROC Curves" style="max-height: 420px; width: auto; margin: 0 auto;">
       <div class="figure-credit">Figure 3: ROC curves comparing the tested anomaly detection models.</div>
     </div>
   </div>

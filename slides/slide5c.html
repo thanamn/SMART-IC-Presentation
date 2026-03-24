@@ -3,24 +3,30 @@
   <h2>Preliminary Study Scenario</h2>
   <p class="subtitle" style="margin-top: 20px;">The paper uses a public semiconductor dataset to illustrate SMART-IC on a realistic early-stage case study.</p>
   
-  <div class="grid-2" style="margin-top: 30px; gap: 30px;">
-    <div class="panel soft">
-      <h3 style="color: var(--accent-2);">Production Setting</h3>
-      <ul class="bullets" style="margin-top: 15px;">
-        <li><strong>Wafers and lots:</strong> wafers move through common production steps and are grouped into lots.</li>
-        <li><strong>Sensor monitoring:</strong> traces capture gas flow, temperature, voltage, and related process variables.</li>
-        <li><strong>Ground truth:</strong> post-production tests label each wafer as faulty or non-faulty.</li>
-      </ul>
+  <div class="grid-2 wide-left" style="margin-top: 30px; gap: 30px; align-items: stretch;">
+    <div class="stack">
+      <div class="panel soft">
+        <h3 style="color: var(--accent-2);">Production Setting</h3>
+        <ul class="bullets" style="margin-top: 15px;">
+          <li><strong>Wafers and lots:</strong> wafers move through common production steps and are grouped into lots.</li>
+          <li><strong>Sensor monitoring:</strong> traces capture gas flow, temperature, voltage, and related process variables.</li>
+          <li><strong>Ground truth:</strong> post-production tests label each wafer as faulty or non-faulty.</li>
+        </ul>
+      </div>
+      
+      <div class="panel">
+        <h3 style="color: var(--gold);">Dataset Snapshot</h3>
+        <ul class="bullets" style="margin-top: 15px;">
+          <li><strong>54 lots</strong> collected in sequence.</li>
+          <li><strong>25 wafers per lot</strong> in the preliminary study.</li>
+          <li><strong>Two process steps:</strong> SPUT with 32 sensors and RTP with 24 sensors.</li>
+          <li><strong>176 s traces</strong> sampled every <strong>1 second</strong>.</li>
+        </ul>
+      </div>
     </div>
-    
-    <div class="panel">
-      <h3 style="color: var(--gold);">Dataset Snapshot</h3>
-      <ul class="bullets" style="margin-top: 15px;">
-        <li><strong>54 lots</strong> collected in sequence.</li>
-        <li><strong>25 wafers per lot</strong> in the preliminary study.</li>
-        <li><strong>Two process steps:</strong> SPUT with 32 sensors and RTP with 24 sensors.</li>
-        <li><strong>176 s traces</strong> sampled every <strong>1 second</strong>.</li>
-      </ul>
+    <div class="figure-card illustration visual">
+      <img src="figures/image_wafer_lot_process.png" alt="Illustrative wafer process flow">
+      <div class="figure-credit">Illustrative wafer process flow to anchor the lot-and-step terminology used in the case study.</div>
     </div>
   </div>
 </div>
