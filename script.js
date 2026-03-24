@@ -3,24 +3,25 @@ const slidesList = [
     'slides/slide2.html',
     'slides/slide3.html',
     'slides/slide4.html',
-    'slides/slide1b.html',        // End of Intro: Project Overview
-    'slides/slide5.html',         // Sec II: Platform (Figure 1)
-    'slides/slide5b.html',        // Sec II: Two Pillars
-    'slides/slide6.html',         // Sec III.A/B: Data Imbalance
-    'slides/slide7.html',         // Sec III.B: Generative Models (Why AE/VAE)
-    'slides/slide10.html',        // Sec III.B.1: Reconstruction Phase
-    'slides/slide11.html',        // Sec III.B.1: Detecting Failures (Figure 2)
-    'slides/slide12.html',        // Sec III.B.1: ROC Curves (Figure 3)
-    'slides/slide8.html',         // Sec III.B.2: Temporal Feature Eng. (Real-time prep)
-    'slides/slide9.html',         // Sec III.B.2: Sliding Window (Figure 4)
-    'slides/slide12b.html',       // Sec III.C: Forecasting
-    'slides/slide12c.html',       // Sec III.D: Synthetic Generation (Figure 5)
-    'slides/slide12d.html',       // Sec III.E: Meta-MES Feedback
-    'slides/slide13.html',        // Wrap-up: Deployment
-    'slides/slide14.html',
-    'slides/slide15.html',
-    'slides/slide16.html',
-    'slides/slide17.html'
+    'slides/slide1b.html',        // Intro Wrap
+    'slides/slide5.html',         // Sec II Platform (Fig 1)
+    'slides/slide5b.html',        // Sec II Two Pillars
+    'slides/slide5c.html',        // Sec III.A Case Study
+    'slides/slide6.html',         // Sec III.A Data Characteristics
+    'slides/slide7.html',         // Methodology
+    'slides/slide10.html',        // Sec III.B.1 Offline Reconstruction
+    'slides/slide11.html',        // Sec III.B.1 Detecting Failures (Fig 2)
+    'slides/slide12.html',        // Sec III.B.1 Performance (Fig 3)
+    'slides/slide8.html',         // Sec III.B.2 Real-time Implementation
+    'slides/slide9.html',         // Sec III.B.2 Sliding Window (Fig 4)
+    'slides/slide12b.html',       // Sec III.C Forecasting
+    'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
+    'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
+    'slides/slide13.html',        // Sec IV Summary & DATE
+    'slides/slide14.html',        // Conclusion - Yield Impact
+    'slides/slide15.html',        // Conclusion - Maintenance Impact
+    'slides/slide16.html',        // Key Takeaways
+    'slides/slide17.html'         // Q&A
 ];
 
 let slides = [];

@@ -1,0 +1,35 @@
+<div class="content full-height">
+  <div class="kicker">Part III: Preliminary Study</div>
+  <h2>Case Study Scenario</h2>
+  <p class="subtitle" style="margin-top: 20px;">Leveraging real-world sensor data from semiconductor frontend production.</p>
+  
+  <div class="grid-2" style="margin-top: 30px; gap: 30px;">
+    <div class="panel soft">
+      <h3 style="color: var(--accent-2);">The Dataset</h3>
+      <p>Building on top of public and industrial data representing a typical wafer fab scenario:</p>
+      <ul class="bullets" style="margin-top: 15px;">
+        <li><strong>Processes:</strong> Deposition (SPUT) & Rapid Thermal (RTP).</li>
+        <li><strong>Sensor Traces:</strong> Gas flow, temperature, and voltage.</li>
+        <li><strong>Timestamp:</strong> 1-second resolution.</li>
+      </ul>
+    </div>
+    
+    <div class="grid-2 wide-left">
+      <div class="mini-cell">
+        <strong>56</strong>
+        <div class="label">Total Sensors</div>
+        <div class="desc">32 SPUT + 24 RTP sensors per trace.</div>
+      </div>
+      <div class="mini-cell">
+        <strong>176s</strong>
+        <div class="label">Trace Duration</div>
+        <div class="desc">Multi-dimensional time series per wafer.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel soft" style="margin-top: 30px; border-left: 4px solid var(--gold);">
+    <h3 style="color: var(--gold);">Scale of Study</h3>
+    <p>The preliminary analysis covers <strong>54 successive lots</strong>, each consisting of <strong>25 wafers</strong>. Each wafer is annotated with binary ground-truth labels (Faulty vs. Normal) obtained from post-production tests.</p>
+  </div>
+</div>
