@@ -1,34 +1,31 @@
 const slidesList = [
     'slides/slide1.html',
-    'slides/slide2.html',
     'slides/slide3.html',
+    'slides/slide2.html',
     'slides/slide1c.html',        // Intro - Capital Costs
     'slides/slide4.html',
-    'slides/slide1d.html',        // Intro - Pseudo-fails
     'slides/slide1b.html',        // Intro - Project Overivew
-    'slides/slide1e.html',        // Intro - Strategic Vision (EU Chips Act)
+    'slides/slide1d.html',        // Intro - Literature Gap / Closing the Loop
+    'slides/slide1e.html',        // Intro - Roadmap
     'slides/slide5.html',         // Sec II Platform (Fig 1)
-    'slides/slide5b.html',        // Sec II Two Pillars
-    'slides/slide5d.html',        // Sec II Univariate vs Multivariate
-    'slides/slide5e.html',        // Sec II Meta-MES Vision
+    'slides/slide5b.html',        // Sec II AI Outputs to Fab Actions
+    'slides/slide5d.html',        // Sec II.A Why Multivariate Deep Learning
+    'slides/slide5e.html',        // Sec II.A Three Core AI Tasks
+    'slides/slide5f.html',        // Sec II.B Extending MES into Meta-MES
+    'slides/slide5g.html',        // Sec II.B Dynamic Scheduling & Feedback
     'slides/slide5c.html',        // Sec III.A Case Study
     'slides/slide6.html',         // Sec III.A Data Characteristics
     'slides/slide7.html',         // Methodology
     'slides/slide10.html',        // Sec III.B.1 Offline Reconstruction
     'slides/slide11.html',        // Sec III.B.1 Detecting Failures (Fig 2)
     'slides/slide12.html',        // Sec III.B.1 Performance (Fig 3)
-    'slides/slide12e.html',       // Sec III.B.1 Thresholds & ROC
-    'slides/slide8.html',         // Sec III.B.2 Real-time Implementation
-    'slides/slide12f.html',       // Sec III.B.2 Windowing Strategy
+    'slides/slide12f.html',       // Sec III.B.2 Real-time Window Logic
     'slides/slide9.html',         // Sec III.B.2 Sliding Window (Fig 4)
     'slides/slide12b.html',       // Sec III.C Forecasting
-    'slides/slide12g.html',       // Sec III.C-D Prognostics & Synthesis
     'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
     'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
     'slides/slide13.html',        // Sec IV Summary & DATE
-    'slides/slide14.html',        // Conclusion - Yield Impact
-    'slides/slide15.html',        // Conclusion - Maintenance Impact
-    'slides/slide16.html',        // Key Takeaways
+    'slides/slide14.html',        // Sec IV Integrated Framework & Feedback
     'slides/slide17.html'         // Q&A
 ];
 
