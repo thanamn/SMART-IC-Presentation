@@ -6,6 +6,8 @@ const slidesList = [
     'slides/slide1b.html',        // Intro Wrap
     'slides/slide5.html',         // Sec II Platform (Fig 1)
     'slides/slide5b.html',        // Sec II Two Pillars
+    'slides/slide5d.html',        // Sec II Univariate vs Multivariate
+    'slides/slide5e.html',        // Sec II Meta-MES Vision
     'slides/slide5c.html',        // Sec III.A Case Study
     'slides/slide6.html',         // Sec III.A Data Characteristics
     'slides/slide7.html',         // Methodology
