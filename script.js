@@ -14,9 +14,12 @@ const slidesList = [
     'slides/slide10.html',        // Sec III.B.1 Offline Reconstruction
     'slides/slide11.html',        // Sec III.B.1 Detecting Failures (Fig 2)
     'slides/slide12.html',        // Sec III.B.1 Performance (Fig 3)
+    'slides/slide12e.html',       // Sec III.B.1 Thresholds & ROC
     'slides/slide8.html',         // Sec III.B.2 Real-time Implementation
+    'slides/slide12f.html',       // Sec III.B.2 Windowing Strategy
     'slides/slide9.html',         // Sec III.B.2 Sliding Window (Fig 4)
     'slides/slide12b.html',       // Sec III.C Forecasting
+    'slides/slide12g.html',       // Sec III.C-D Prognostics & Synthesis
     'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
     'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
     'slides/slide13.html',        // Sec IV Summary & DATE

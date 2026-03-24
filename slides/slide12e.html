@@ -1,0 +1,25 @@
+<div class="content full-height">
+  <div class="kicker">Part III: Preliminary Study</div>
+  <h2>Setting The Anomaly Threshold</h2>
+  <p class="subtitle" style="margin-top: 20px;">Turning reconstruction error into a binary decision.</p>
+  
+  <div class="grid-2" style="margin-top: 30px; gap: 40px;">
+    <div class="panel">
+      <h3 style="color: var(--accent);">The Decision Logic</h3>
+      <p>Anomaly detection is treated as a <strong>binary classification task</strong>. We compare the reconstruction error (RE) against an imposed threshold:</p>
+      <div class="callout" style="margin-top: 20px; border-color: #fb7185; background: rgba(251,113,133,0.05);">
+        <code style="font-size: 1.2rem; color: #fb7185;">IF (RE > Threshold) THEN Anomaly</code>
+      </div>
+      <p style="margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">The threshold is set to guarantee a target False Alarm Rate (FAR) compatible with fab operations.</p>
+    </div>
+
+    <div class="panel soft">
+      <h3 style="color: var(--heading);">Why ROC & AUC?</h3>
+      <p>Since the "perfect" threshold depends on business cost (Yield loss vs. Maintenance cost), we evaluate models using **ROC Curves**:</p>
+      <ul class="bullets" style="margin-top: 15px;">
+        <li><strong>Threshold-less Measure:</strong> AUC (Area Under Curve) evaluates the model across ALL possible thresholds.</li>
+        <li><strong>Top Performance:</strong> VAE/AE achieved **AUC = 0.9**, proving high discriminative power.</li>
+      </ul>
+    </div>
+  </div>
+</div>

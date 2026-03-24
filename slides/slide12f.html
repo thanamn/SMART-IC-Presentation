@@ -1,0 +1,26 @@
+<div class="content full-height">
+  <div class="kicker">Part III: Preliminary Study</div>
+  <h2>Real-Time Windowing Strategy</h2>
+  <p class="subtitle" style="margin-top: 20px;">Moving from offline inspection to in-situ monitoring.</p>
+
+  <div class="grid-2" style="margin-top: 30px; gap: 40px; align-items: center;">
+    <div class="panel soft" style="border-left: 4px solid #3b82f6;">
+      <h3 style="color: #3b82f6;">The Sliding Window (W)</h3>
+      <p>Instead of the entire 176s recording, the ML model is trained to reconstruct a small time-window <strong>W</strong>.</p>
+      <ul class="bullets" style="margin-top: 15px;">
+        <li><strong>Stride:</strong> 1 second (matching sensor resolution).</li>
+        <li><strong>Recon:</strong> Computes the error only up to the current timestamp $t_0$.</li>
+        <li><strong>Alert:</strong> If $RE > Threshold$ at $t_0$, an immediate alert is sent to Meta-MES.</li>
+      </ul>
+    </div>
+
+    <div class="panel highlight">
+      <h3 style="color: var(--heading);">Why "Windowed"?</h3>
+      <p>Punctual anomaly detection requires seeing the *evolution* of the signal, not just a single data point. A window captures the <strong>temporal context</strong> needed to identify mechanical wear or gas flow instability as it happens.</p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 30px; border-color: #fbbf24; text-align: center;">
+    <p><strong>This architecture allows SMART-IC to flag faults in-situ, potentially stopping a process before it destroys the wafer.</strong></p>
+  </div>
+</div>
