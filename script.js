@@ -64,6 +64,7 @@ async function initPresentation() {
     
     // Setup event listeners
     document.addEventListener('keydown', (e) => {
+      if (!slides || slides.length === 0) return;
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) {
         e.preventDefault();
         nextSlide();
@@ -82,8 +83,10 @@ async function initPresentation() {
       }
     });
 
-    document.getElementById('nextBtn').addEventListener('click', nextSlide);
-    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
     // Navigate by clicking left/right thirds, but ignore buttons and selectable content.
     document.addEventListener('click', (e) => {
