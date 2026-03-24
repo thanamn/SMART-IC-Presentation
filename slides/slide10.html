@@ -1,0 +1,25 @@
+<div class="content full-height">
+  <div class="kicker">Part III: Preliminary Study</div>
+  <h2>Generative AI in Action</h2>
+  <div class="panel" style="margin-top: 40px;">
+    <h3>The Reconstruction Phase</h3>
+    <p>Once trained exclusively on normal engineering records, the models attempt to reconstruct new, incoming test data.</p>
+    <div class="process-flow" style="margin-top: 30px;">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Ingest</h3>
+        <p>Raw testing signals are parsed into the 38 designed features.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Reconstruct</h3>
+        <p>The Generative Model (VAE/DAGMM) outputs the expected "healthy" values.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Diff</h3>
+        <p>The residual error between the actual and reconstructed signal is calculated.</p>
+      </div>
+    </div>
+  </div>
+</div>

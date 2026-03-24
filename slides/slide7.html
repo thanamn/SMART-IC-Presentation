@@ -1,0 +1,24 @@
+<div class="content full-height">
+  <div class="kicker">Part III: Preliminary Study</div>
+  <h2>Moving to Generative Models</h2>
+  <div class="grid-2 wide-left" style="margin-top: 40px; align-items: center;">
+    <div class="stack">
+      <div class="panel soft" style="border-color: rgba(251,113,133,0.4);">
+        <h3 style="color: #fb7185;">Why Not Classification?</h3>
+        <p>Traditional classifiers require balanced datasets (50/50 normal vs failed). They completely fail to generalize on 99.9% skewed fab data.</p>
+      </div>
+      <div class="panel soft" style="border-color: rgba(52,211,153,0.4);">
+        <h3 style="color: #34d399;">The Generative Approach</h3>
+        <p>Models are trained <em>only</em> on normal production data to learn "healthy" distributions. Anything deviating is flagged as an anomaly.</p>
+      </div>
+    </div>
+    <div class="panel" style="background: rgba(14,25,42,0.5);">
+      <h3 style="color: var(--accent-2);">Selected Architectures</h3>
+      <ul class="bullets" style="margin-top: 20px;">
+        <li><strong>Autoencoders (AE):</strong> Bottleneck compression.</li>
+        <li><strong>Variational AE (VAE):</strong> Probabilistic latent spaces.</li>
+        <li><strong>DAGMM:</strong> Deep Autoencoding Gaussian Mixture Model for complex distributions.</li>
+      </ul>
+    </div>
+  </div>
+</div>

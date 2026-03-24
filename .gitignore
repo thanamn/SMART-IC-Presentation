@@ -1,0 +1,12 @@
+# Ignore heavy PDFs and text sources
+*.pdf
+*.txt
+
+# Ignore Python scraping scripts
+*.py
+__pycache__/
+
+# Ignore example/scraped files from previous tests
+example.html
+Cover · SMART-IC deck_files/
+.DS_Store

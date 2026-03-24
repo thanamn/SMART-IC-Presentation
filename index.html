@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART-IC deck</title>
+    <!-- Fonts matching the target design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="progress"><span id="progressFill" style="width: 0%;"></span></div>
+    <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous slide">‹</button>
+    <button class="nav-btn nav-next" id="nextBtn" aria-label="Next slide">›</button>
+    <div class="controls">← / → เปลี่ยนหน้า &middot; Home / End กระโดดหน้า &middot; F fullscreen</div>
+    <div class="counter" id="counter">1 / 1</div>
+
+    <div id="app">
+        <!-- background-elements if any could go here, but example.html body::before handles the grid and background handles gradients -->
+        <!-- Dynamically loaded slides will be injected here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
