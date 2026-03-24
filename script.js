@@ -28,11 +28,30 @@ const slidesList = [
   'slides/slide17.html'         // Q&A
 ];
 
+const runtimeScriptUrl = document.currentScript ? new URL(document.currentScript.src, window.location.href) : new URL(window.location.href);
+const ASSET_VERSION = runtimeScriptUrl.searchParams.get('v') || '20260325-1';
+
 let slides = [];
 let current = 0;
 let progressFill;
 let counter;
 let listenersAttached = false;
+
+function withAssetVersion(path) {
+  if (!path || /^(data:|blob:|https?:|\/\/)/i.test(path)) return path;
+
+  const url = new URL(path, window.location.href);
+  url.searchParams.set('v', ASSET_VERSION);
+  return url.toString();
+}
+
+function versionSlideAssets(container) {
+  container.querySelectorAll('img[src]').forEach((img) => {
+    const source = img.getAttribute('src');
+    if (!source) return;
+    img.src = withAssetVersion(source);
+  });
+}
 
 async function initPresentation() {
   const app = document.getElementById('app');
@@ -52,7 +71,7 @@ async function initPresentation() {
 
 async function appendSlide(slidePath, container, index) {
   try {
-    const response = await fetch(slidePath);
+    const response = await fetch(withAssetVersion(slidePath), { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const html = await response.text();
 
@@ -61,6 +80,7 @@ async function appendSlide(slidePath, container, index) {
     const variantClass = getSlideVariant(typeof index === 'number' ? index : slides.length);
     if (variantClass) section.classList.add(variantClass);
     section.innerHTML = html;
+    versionSlideAssets(section);
     container.appendChild(section);
     slides.push(section);
     if (slides.length > 1) {
