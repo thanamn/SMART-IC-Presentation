@@ -1,20 +1,25 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Sliding Window Architecture</h2>
-  <div class="grid-2 wide-right" style="margin-top: 40px;">
+  <div class="kicker">Section III-B: Anomaly Detection</div>
+  <h2>Figure 4: Sliding Window Example</h2>
+  <div class="grid-2 wide-right" style="margin-top: 28px;">
     <div class="stack">
-      <div class="callout info">
-        <strong>Context Preservation:</strong> Features aren't calculated per-die, but aggregations over the recent past to capture the gradual degradation of the probe card CRES.
+      <div class="panel soft">
+        <h3 style="color: var(--accent-2);">Reading the Figure</h3>
+        <ul class="bullets" style="margin-top: 15px;">
+          <li><strong>W moves forward</strong> with the incoming sensor stream.</li>
+          <li><strong>Error is computed</strong> on the current reconstructed window.</li>
+          <li><strong>Threshold crossings</strong> identify anomalous timestamps.</li>
+        </ul>
       </div>
       <div class="chips">
-        <span class="chip">Aggregated Min/Max</span>
-        <span class="chip">Mean Shifts</span>
-        <span class="chip">Variance Spikes</span>
+        <span class="chip">Current Window</span>
+        <span class="chip">Reconstruction Error</span>
+        <span class="chip">Immediate Alert</span>
       </div>
     </div>
     <div class="figure-card">
       <img src="figures/figure4.png" alt="Sliding Window Details">
-      <div class="figure-credit">Figure 4: The 20-wafer sliding window feature extraction methodology.</div>
+      <div class="figure-credit">Figure 4: Window-based real-time anomaly detection on a continuous production trace.</div>
     </div>
   </div>
 </div>

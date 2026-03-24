@@ -1,15 +1,20 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Reconstruction Error Signals</h2>
+  <div class="kicker">Section III-B: Anomaly Detection</div>
+  <h2>Normal vs Faulty Reconstruction</h2>
   <div class="grid-2 wide-right" style="margin-top: 30px; align-items: stretch;">
     <div class="stack">
-      <div class="callout warning">
-        <strong>The Warning Sign:</strong> A massive spike in reconstruction error directly correlates with physical debris accumulation and high Contact Resistance (CRES) on the probes.
+      <div class="panel soft" style="border-color: rgba(251,191,36,0.35);">
+        <h3 style="color: #fbbf24;">Reading Figure 2</h3>
+        <ul class="bullets" style="margin-top: 15px;">
+          <li><strong>Normal wafer:</strong> real and reconstructed traces remain close.</li>
+          <li><strong>Faulty wafer:</strong> the mismatch grows in the abnormal region.</li>
+          <li><strong>Key signal:</strong> the reconstruction error becomes the anomaly score.</li>
+        </ul>
       </div>
     </div>
     <div class="figure-card">
       <img src="figures/figure2.png" alt="Reconstruction Errors over time">
-      <div class="figure-credit">Figure 2: Tracking the residual errors across thousands of touchdowns. The threshold breach clearly identifies failure points.</div>
+      <div class="figure-credit">Figure 2: Example of a real and reconstructed trace for a normal wafer (top) and a faulty wafer (bottom).</div>
     </div>
   </div>
 </div>

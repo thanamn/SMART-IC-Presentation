@@ -1,25 +1,29 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Industrial Data Characteristics</h2>
-  <div class="panel" style="margin-top: 40px;">
-    <h3>The Data Imbalance Problem</h3>
-    <p>Semiconductor manufacturing data in volume production is heavily skewed.</p>
-    <div class="mini-table" style="margin-top: 25px;">
+  <div class="kicker">Section III-A: Scenario</div>
+  <h2>Why This Dataset Fits SMART-IC</h2>
+  <div class="panel" style="margin-top: 28px;">
+    <h3>Study Purpose</h3>
+    <p>Because SMART-IC is still in its initial stage, the paper uses public data to showcase the strategy, estimate its impact, and guide the next project steps.</p>
+    <div class="mini-table" style="margin-top: 22px;">
       <div class="mini-cell">
-        <strong>99.9%</strong>
-        <div class="label" style="color: #34d399">Normal Data</div>
-        <div class="desc">Healthy probe touchdowns making up the vast majority of readings.</div>
+        <strong>2</strong>
+        <div class="label" style="color: var(--accent-2)">Process Steps</div>
+        <div class="desc">SPUT deposition and RTP thermal processing.</div>
       </div>
-      <div class="mini-cell" style="border-color: rgba(251,113,133,0.3);">
-        <strong style="color: #fb7185">&lt; 0.1%</strong>
-        <div class="label" style="color: #fb7185">Anomalies</div>
-        <div class="desc">Extremely rare failure events, making supervised learning impossible.</div>
+      <div class="mini-cell" style="border-color: rgba(20,184,166,0.3);">
+        <strong style="color: var(--accent);">56</strong>
+        <div class="label" style="color: var(--accent)">Sensors</div>
+        <div class="desc">Multivariate traces describing each wafer over time.</div>
       </div>
-      <div class="mini-cell" style="border-color: rgba(96,165,250,0.3);">
-        <strong style="color: #60a5fa">High</strong>
-        <div class="label" style="color: #60a5fa">Concept Drift</div>
-        <div class="desc">Changing environmental parameters and natural mechanical wear over time.</div>
+      <div class="mini-cell" style="border-color: rgba(245,158,11,0.3);">
+        <strong style="color: var(--gold);">Binary</strong>
+        <div class="label" style="color: var(--gold)">Final Labels</div>
+        <div class="desc">The only ground truth available for the analysis.</div>
       </div>
     </div>
+  </div>
+
+  <div class="callout" style="margin-top: 24px;">
+    This gives the project a practical stand-in for the industrial sensor streams SMART-IC will use later with real production data.
   </div>
 </div>

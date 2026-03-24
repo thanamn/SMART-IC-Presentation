@@ -1,35 +1,26 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Case Study Scenario</h2>
-  <p class="subtitle" style="margin-top: 20px;">Leveraging real-world sensor data from semiconductor frontend production.</p>
+  <div class="kicker">Section III-A: Scenario</div>
+  <h2>Preliminary Study Scenario</h2>
+  <p class="subtitle" style="margin-top: 20px;">The paper uses a public semiconductor dataset to illustrate SMART-IC on a realistic early-stage case study.</p>
   
   <div class="grid-2" style="margin-top: 30px; gap: 30px;">
     <div class="panel soft">
-      <h3 style="color: var(--accent-2);">The Dataset</h3>
-      <p>Building on top of public and industrial data representing a typical wafer fab scenario:</p>
+      <h3 style="color: var(--accent-2);">Production Setting</h3>
       <ul class="bullets" style="margin-top: 15px;">
-        <li><strong>Processes:</strong> Deposition (SPUT) & Rapid Thermal (RTP).</li>
-        <li><strong>Sensor Traces:</strong> Gas flow, temperature, and voltage.</li>
-        <li><strong>Timestamp:</strong> 1-second resolution.</li>
+        <li><strong>Wafers and lots:</strong> wafers move through common production steps and are grouped into lots.</li>
+        <li><strong>Sensor monitoring:</strong> traces capture gas flow, temperature, voltage, and related process variables.</li>
+        <li><strong>Ground truth:</strong> post-production tests label each wafer as faulty or non-faulty.</li>
       </ul>
     </div>
     
-    <div class="grid-2 wide-left">
-      <div class="mini-cell">
-        <strong>56</strong>
-        <div class="label">Total Sensors</div>
-        <div class="desc">32 SPUT + 24 RTP sensors per trace.</div>
-      </div>
-      <div class="mini-cell">
-        <strong>176s</strong>
-        <div class="label">Trace Duration</div>
-        <div class="desc">Multi-dimensional time series per wafer.</div>
-      </div>
+    <div class="panel">
+      <h3 style="color: var(--gold);">Dataset Snapshot</h3>
+      <ul class="bullets" style="margin-top: 15px;">
+        <li><strong>54 lots</strong> collected in sequence.</li>
+        <li><strong>25 wafers per lot</strong> in the preliminary study.</li>
+        <li><strong>Two process steps:</strong> SPUT with 32 sensors and RTP with 24 sensors.</li>
+        <li><strong>176 s traces</strong> sampled every <strong>1 second</strong>.</li>
+      </ul>
     </div>
-  </div>
-
-  <div class="panel soft" style="margin-top: 30px; border-left: 4px solid var(--gold);">
-    <h3 style="color: var(--gold);">Scale of Study</h3>
-    <p>The preliminary analysis covers <strong>54 successive lots</strong>, each consisting of <strong>25 wafers</strong>. Each wafer is annotated with binary ground-truth labels (Faulty vs. Normal) obtained from post-production tests.</p>
   </div>
 </div>

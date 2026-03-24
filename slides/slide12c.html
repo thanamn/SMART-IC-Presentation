@@ -1,20 +1,20 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Synthetic Data Generation</h2>
-  <div class="grid-2" style="margin-top: 40px; align-items: stretch;">
+  <div class="kicker">Section III-D: ML-Based Synthetic Data Generation</div>
+  <h2>Generating New Production Traces</h2>
+  <div class="grid-2" style="margin-top: 30px; align-items: stretch;">
     <div class="stack">
       <div class="panel soft" style="border-color: rgba(167,139,250,0.5);">
-        <h3 style="color: #a78bfa;">The Data Imbalance Problem</h3>
-        <p>In high-yield fabs, "faulty" data is extremely rare. Models need examples of failures to learn, but producing real failures ruins expensive wafers.</p>
+        <h3 style="color: #a78bfa;">Generation Task</h3>
+        <p>A generative model starts from random input, such as Gaussian noise, and outputs a new trace that mimics the training distribution.</p>
       </div>
       <div class="panel soft" style="border-color: rgba(52,211,153,0.4);">
-        <h3 style="color: #34d399;">Generative Solutions</h3>
-        <p>Using <strong>GANs</strong> (Generative Adversarial Networks) and <strong>Diffusion Models</strong> trained on noise, conditioned to synthesize highly realistic traces of faulty wafers without destroying real silicon.</p>
+        <h3 style="color: #34d399;">Conditioned Output</h3>
+        <p><strong>GANs</strong> and <strong>Diffusion Models</strong> can be conditioned with labels, so the generated trace belongs to a chosen class such as normal or faulty.</p>
       </div>
     </div>
     <div class="figure-card">
       <img src="figures/figure5.png" alt="Data Generation Task">
-      <div class="figure-credit">Figure 5: Example of the data generation task (Gaussian noise to realistic traces).</div>
+      <div class="figure-credit">Figure 5: From random noise to realistic normal or faulty production traces.</div>
     </div>
   </div>
 </div>

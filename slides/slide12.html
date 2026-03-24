@@ -1,19 +1,42 @@
 <div class="content full-height">
-  <div class="kicker">Part III: Preliminary Study</div>
-  <h2>Performance Evaluation (ROC)</h2>
-  <div class="grid-2 wide-right" style="margin-top: 30px;">
+  <div class="kicker">Section III-B: Anomaly Detection</div>
+  <h2>Figure 3: ROC Comparison</h2>
+  <p class="subtitle" style="margin-top: 20px;">ROC curves show how well each model separates normal and faulty wafers across all thresholds.</p>
+
+  <div class="grid-2 wide-right" style="margin-top: 28px; align-items: stretch;">
     <div class="panel soft">
-      <h3>Model Comparison</h3>
-      <p>The models were evaluated strictly against historic ground truth failure logs from the fab.</p>
-      <ul class="bullets" style="margin-top: 20px;">
-        <li><strong>DAGMM:</strong> Highest Area Under Curve (AUC).</li>
-        <li><strong>VAE:</strong> Strong probabilistic thresholding.</li>
-        <li><strong>Base AE:</strong> Faster inference, but susceptible to noise.</li>
-      </ul>
+      <h3 style="color: var(--accent-2);">Best AUC Scores</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px;">
+        <div class="mini-cell" style="min-height: 104px;">
+          <strong style="color: var(--accent-2);">0.90</strong>
+          <div class="label">AE</div>
+          <div class="desc">Top preliminary result.</div>
+        </div>
+        <div class="mini-cell" style="min-height: 104px;">
+          <strong style="color: #60a5fa;">0.90</strong>
+          <div class="label">VAE</div>
+          <div class="desc">Matches AE performance.</div>
+        </div>
+        <div class="mini-cell" style="min-height: 104px;">
+          <strong style="color: #fbbf24;">0.76</strong>
+          <div class="label">Omnianomaly</div>
+          <div class="desc">Useful, but clearly lower.</div>
+        </div>
+        <div class="mini-cell" style="min-height: 104px;">
+          <strong style="color: #fb7185;">0.55</strong>
+          <div class="label">VQ-VAE</div>
+          <div class="desc">Weakest result here.</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 18px; border-color: rgba(96,165,250,0.35); background: rgba(59,130,246,0.08);">
+        AE and VAE are the strongest candidates in this preliminary study.
+      </div>
     </div>
+
     <div class="figure-card">
       <img src="figures/figure3.png" alt="ROC Curves">
-      <div class="figure-credit">Figure 3: Receiver Operating Characteristic (ROC) comparing different algorithms.</div>
+      <div class="figure-credit">Figure 3: ROC curves comparing the tested anomaly detection models.</div>
     </div>
   </div>
 </div>
