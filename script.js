@@ -2,8 +2,11 @@ const slidesList = [
     'slides/slide1.html',
     'slides/slide2.html',
     'slides/slide3.html',
+    'slides/slide1c.html',        // Intro - Capital Costs
     'slides/slide4.html',
-    'slides/slide1b.html',        // Intro Wrap
+    'slides/slide1d.html',        // Intro - Pseudo-fails
+    'slides/slide1b.html',        // Intro - Project Overivew
+    'slides/slide1e.html',        // Intro - Strategic Vision (EU Chips Act)
     'slides/slide5.html',         // Sec II Platform (Fig 1)
     'slides/slide5b.html',        // Sec II Two Pillars
     'slides/slide5d.html',        // Sec II Univariate vs Multivariate
