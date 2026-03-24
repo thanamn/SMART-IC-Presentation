@@ -25,7 +25,6 @@ const slidesList = [
     'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
     'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
     'slides/slide13.html',        // Sec IV Summary & DATE
-    'slides/slide14.html',        // Sec IV Integrated Framework & Feedback
     'slides/slide17.html'         // Q&A
 ];
 
