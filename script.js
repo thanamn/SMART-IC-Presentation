@@ -36,6 +36,8 @@ let current = 0;
 let progressFill;
 let counter;
 let listenersAttached = false;
+let slidesLoadPromise = null;
+let isPrinting = false;
 
 function withAssetVersion(path) {
   if (!path || /^(data:|blob:|https?:|\/\/)/i.test(path)) return path;
@@ -53,6 +55,49 @@ function versionSlideAssets(container) {
   });
 }
 
+function waitForImages(root = document) {
+  const images = Array.from(root.querySelectorAll('img'));
+  const pending = images.filter((img) => !img.complete);
+  if (pending.length === 0) return Promise.resolve();
+
+  return Promise.all(
+    pending.map((img) => new Promise((resolve) => {
+      img.addEventListener('load', resolve, { once: true });
+      img.addEventListener('error', resolve, { once: true });
+    }))
+  );
+}
+
+async function ensureAllSlidesLoaded() {
+  if (slides.length >= slidesList.length) return;
+  if (!slidesLoadPromise) {
+    const app = document.getElementById('app');
+    if (!app) return;
+    slidesLoadPromise = loadRemainingSlides(app, slides.length);
+  }
+  await slidesLoadPromise;
+}
+
+async function preparePresentationForPrint() {
+  await ensureAllSlidesLoaded();
+  await waitForImages(document.getElementById('app'));
+  await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+}
+
+async function printPresentation() {
+  if (isPrinting) return;
+  isPrinting = true;
+  document.body.classList.add('print-mode');
+
+  try {
+    await preparePresentationForPrint();
+    window.print();
+  } catch (error) {
+    console.error('Error preparing print:', error);
+    window.print();
+  }
+}
+
 async function initPresentation() {
   const app = document.getElementById('app');
   if (!app) return;
@@ -66,7 +111,7 @@ async function initPresentation() {
 
   // Load the remaining slides in the background so the first slide is visible immediately.
   const startIndex = slides.length > 0 ? 1 : 0;
-  loadRemainingSlides(app, startIndex);
+  slidesLoadPromise = loadRemainingSlides(app, startIndex);
 }
 
 async function appendSlide(slidePath, container, index) {
@@ -109,7 +154,13 @@ function attachInteractionHandlers() {
   if (listenersAttached) return;
   listenersAttached = true;
 
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener('keydown', async (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
+      e.preventDefault();
+      await printPresentation();
+      return;
+    }
+
     if (!slides || slides.length === 0) return;
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) {
       e.preventDefault();
@@ -141,6 +192,16 @@ function attachInteractionHandlers() {
     const xRatio = e.clientX / window.innerWidth;
     if (xRatio > 0.78) nextSlide();
     else if (xRatio < 0.22) prevSlide();
+  });
+
+  window.addEventListener('beforeprint', () => {
+    document.body.classList.add('print-mode');
+    void preparePresentationForPrint();
+  });
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('print-mode');
+    isPrinting = false;
   });
 }
 

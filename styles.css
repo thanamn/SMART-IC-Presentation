@@ -1086,3 +1086,122 @@ body::after {
 .logo-strip { display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; height: 100px; }
 .logo-strip img { max-height: 80px; width: auto; max-width: 300px; object-fit: contain; background: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease; }
 .logo-strip img:hover { transform: scale(1.05); }
+
+@page {
+  size: landscape;
+  margin: 10mm;
+}
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --panel: #f8fafc;
+    --line: rgba(15, 23, 42, 0.14);
+    --text: #0f172a;
+    --muted: #475569;
+    --heading: #0f172a;
+  }
+
+  html,
+  body {
+    width: auto;
+    height: auto;
+    overflow: visible !important;
+    background: #ffffff !important;
+    background-image: none !important;
+    color: var(--text) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body::before,
+  body::after,
+  .slide::after {
+    display: none !important;
+  }
+
+  #app {
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .progress,
+  .counter,
+  .controls,
+  .nav-btn {
+    display: none !important;
+  }
+
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+    padding: 10mm 12mm 12mm !important;
+    page-break-after: always;
+    break-after: page;
+    background: #ffffff !important;
+    color: var(--text) !important;
+  }
+
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .panel,
+  .stat,
+  .mini-cell,
+  .step,
+  .callout,
+  .quote,
+  .takeaway,
+  .hero-badge,
+  .chip {
+    background: #f8fafc !important;
+    border-color: rgba(15, 23, 42, 0.14) !important;
+    color: var(--text) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .panel::before {
+    opacity: 0.2 !important;
+  }
+
+  .panel p,
+  .panel li,
+  .callout,
+  .card-body,
+  .subtitle,
+  .figure-credit,
+  .meta-strip,
+  .tiny,
+  .footer-note,
+  .stat .label,
+  .stat .desc,
+  .mini-cell .label,
+  .mini-cell .desc,
+  .chip,
+  .legend,
+  .bar-value,
+  .bar-label,
+  .quote {
+    color: #334155 !important;
+  }
+
+  .figure-card img,
+  .funding-strip img,
+  .logo-strip img {
+    box-shadow: none !important;
+  }
+
+  .logo-strip img:hover {
+    transform: none !important;
+  }
+}
