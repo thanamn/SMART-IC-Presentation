@@ -1,39 +1,46 @@
 const slidesList = [
-  'slides/slide1.html',
-  'slides/slide3.html',
-  'slides/slide2.html',
-  'slides/slide1c.html',        // Intro - Capital Costs
-  'slides/slide1b.html',        // Intro - Project Overivew
-  'slides/slide1d.html',        // Intro - Literature Gap / Closing the Loop
-  'slides/slide4.html',         // Intro - Why AI / ML Fits
-  'slides/slide1e.html',        // Intro - Roadmap
-  'slides/slide5.html',         // Sec II Platform (Fig 1)
-  'slides/slide5b.html',        // Sec II AI Outputs to Fab Actions
-  'slides/slide5d.html',        // Sec II.A Why Multivariate Deep Learning
-  'slides/slide5e.html',        // Sec II.A Three Core AI Tasks
-  'slides/slide5f.html',        // Sec II.B Extending MES into Meta-MES
-  'slides/slide5g.html',        // Sec II.B Dynamic Scheduling & Feedback
-  'slides/slide5c.html',        // Sec III.A Case Study
-  'slides/slide6.html',         // Sec III.A Data Characteristics
-  'slides/slide7.html',         // Methodology
-  'slides/slide10.html',        // Sec III.B.1 Offline Reconstruction
-  'slides/slide11.html',        // Sec III.B.1 Detecting Failures (Fig 2)
-  'slides/slide12.html',        // Sec III.B.1 Performance (Fig 3)
-  'slides/slide12f.html',       // Sec III.B.2 Real-time Window Logic
-  'slides/slide9.html',         // Sec III.B.2 Sliding Window (Fig 4)
-  'slides/slide12b.html',       // Sec III.C Forecasting
-  'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
-  'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
-  'slides/slide13.html',        // Sec IV Summary & DATE
-  'slides/slide14.html',        // Reflection - What the paper does well
-  'slides/slide15.html',        // Reflection - What is still missing
-  'slides/slide16.html',        // Reflection - Project progress and outputs
-  'slides/slide16b.html',       // Reflection - Final conclusion
-  'slides/slide17.html'         // Q&A
+  // Section I: Introduction
+  'slides/01-title.html',
+  'slides/02-why-semiconductor-manufacturing-matters.html',
+  'slides/03-reliability-is-an-economic-imperative.html',
+  'slides/04-testing-is-essential-and-expensive.html',
+  'slides/05-smart-ic-project-overview.html',
+  'slides/06-the-gap-smart-ic-tries-to-close.html',
+  'slides/07-why-ai-and-ml-fit-semiconductor-manufacturing.html',
+  'slides/08-paper-roadmap.html',
+
+  // Section II: SMART-IC Framework
+  'slides/09-smart-ic-framework.html',
+  'slides/10-from-ai-outputs-to-fab-actions.html',
+  'slides/11-learning-from-multivariate-production-traces.html',
+  'slides/12-three-core-ai-tasks.html',
+  'slides/13-extending-mes-into-meta-mes.html',
+  'slides/14-dynamic-scheduling-and-feedback-loop.html',
+
+  // Section III: Preliminary Study
+  'slides/15-preliminary-study-scenario.html',
+  'slides/16-why-this-dataset-fits-smart-ic.html',
+  'slides/17-learning-normal-behavior.html',
+  'slides/18-offline-wafer-level-detection.html',
+  'slides/19-normal-vs-faulty-reconstruction.html',
+  'slides/20-roc-comparison-of-detection-models.html',
+  'slides/21-window-based-real-time-detection.html',
+  'slides/22-sliding-window-detection-example.html',
+  'slides/23-predicting-future-production-data.html',
+  'slides/24-generating-new-production-traces.html',
+  'slides/25-how-meta-mes-uses-the-ai-engine.html',
+
+  // Section IV and Closing
+  'slides/26-why-smart-ic-matters-to-the-date-community.html',
+  'slides/27-what-this-paper-does-well.html',
+  'slides/28-what-is-still-missing.html',
+  'slides/29-verified-project-status-and-public-outputs.html',
+  'slides/30-what-this-paper-ultimately-is.html',
+  'slides/31-qa.html'
 ];
 
 const runtimeScriptUrl = document.currentScript ? new URL(document.currentScript.src, window.location.href) : new URL(window.location.href);
-const ASSET_VERSION = runtimeScriptUrl.searchParams.get('v') || '20260325-2';
+const ASSET_VERSION = runtimeScriptUrl.searchParams.get('v') || '20260325-3';
 
 let slides = [];
 let current = 0;
