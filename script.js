@@ -25,11 +25,15 @@ const slidesList = [
   'slides/slide12c.html',       // Sec III.D Synthetic Data (Fig 5)
   'slides/slide12d.html',       // Sec III.E Meta-MES Optimization
   'slides/slide13.html',        // Sec IV Summary & DATE
+  'slides/slide14.html',        // Reflection - What the paper does well
+  'slides/slide15.html',        // Reflection - What is still missing
+  'slides/slide16.html',        // Reflection - Project progress and outputs
+  'slides/slide16b.html',       // Reflection - Final conclusion
   'slides/slide17.html'         // Q&A
 ];
 
 const runtimeScriptUrl = document.currentScript ? new URL(document.currentScript.src, window.location.href) : new URL(window.location.href);
-const ASSET_VERSION = runtimeScriptUrl.searchParams.get('v') || '20260325-1';
+const ASSET_VERSION = runtimeScriptUrl.searchParams.get('v') || '20260325-2';
 
 let slides = [];
 let current = 0;
